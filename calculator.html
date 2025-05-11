@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resistor kalkulačka</title>
+  <link rel="stylesheet" href="css/resistor.css" />
+</head>
+<body>
+    <div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source src="video/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+  <div class="resistor-calculator">
+    <div class="resistor-form">
+      <h2>Kalkulačka odporu rezistora</h2>
+
+      <label for="band-count">Počet pásikov:</label>
+      <select id="band-count">
+        <option value="4">4 pásiky</option>
+        <option value="5">5 pásikov</option>
+        <option value="6">6 pásikov</option>
+      </select>
+
+      <form id="resistor-form">
+        <!-- 1st Band -->
+        <fieldset>
+          <legend>1. pás:</legend>
+          <div class="color-options">
+            <label><input type="radio" name="band1" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="band1" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="band1" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="band1" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="white">
+                 biela
+            </label>
+
+          </div>
+        </fieldset>
+
+        <!-- 2nd Band -->
+        <fieldset>
+          <legend>2. pás:</legend>
+          <div class="color-options">
+            <label><input type="radio" name="band2" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="band2" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="band2" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="band2" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="white">
+                 biela
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Multiplier -->
+        <fieldset>
+          <legend>Násobiteľ:</legend>
+          <div class="color-options">
+            <label><input type="radio" name="multiplier" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="white">
+                 biela
+            </label>
+
+            <label><input type="radio" name="multiplier" value="gold"> 
+                <span>zlatá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="silver"> 
+                <span>strieborná</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Tolerance -->
+        <fieldset>
+          <legend>Tolerancia:</legend>
+          <div class="color-options">
+            <label><input type="radio" name="tolerance" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="grey"> 
+                <span>sivá</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="gold"> 
+                <span>zlatá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="silver"> 
+                <span>strieborná</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Vypočítať</button>
+      </form>
+
+      
+      
+      <form id="resistor-form-5" style="display: none;">
+  <!-- 1. pás -->
+  <fieldset>
+    <legend>1. pás:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="band1" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="band1" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="band1" value="red">
+                 <span>červená</span>
+                </label>
+            
+                <label><input type="radio" name="band1" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="band1" value="white">
+                 biela
+            </label>
+    </div>
+  </fieldset>
+
+  <!-- 2. pás -->
+  <fieldset>
+    <legend>2. pás:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="band2" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="band2" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="band2" value="red">
+                 <span>červená</span>
+                </label>
+            
+                <label><input type="radio" name="band2" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="band2" value="white">
+                 biela
+            </label>
+    </div>
+  </fieldset>
+
+  <!-- 3. pás -->
+  <fieldset>
+    <legend>3. pás:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="band3" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="band3" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="band3" value="red">
+                 <span>červená</span>
+                </label>
+            
+                <label><input type="radio" name="band3" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="band3" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="band3" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="band3" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="band3" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="band3" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="band3" value="white">
+                 biela
+            </label>
+    </div>
+  </fieldset>
+
+  <!-- Násobiteľ -->
+  <fieldset>
+    <legend>Násobiteľ:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="multiplier" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="white">
+                 biela
+            </label>
+
+            <label><input type="radio" name="multiplier" value="gold"> 
+                <span>zlatá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="silver"> 
+                <span>strieborná</span>
+            </label>
+    </div>
+  </fieldset>
+
+  <!-- Tolerancia -->
+  <fieldset>
+    <legend>Tolerancia:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="tolerance" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="grey"> 
+                <span>sivá</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="gold"> 
+                <span>zlatá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="silver"> 
+                <span>strieborná</span>
+            </label>
+    </div>
+  </fieldset>
+
+  <button type="submit">Vypočítať</button>
+</form>
+
+<form id="resistor-form-6" style="display: none;">
+  <!-- 1. pás -->
+  <fieldset>
+    <legend>1. pás:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="band1" value="black"><span>čierna</span></label>
+      <label><input type="radio" name="band1" value="brown"><span>hnedá</span></label>
+      <label><input type="radio" name="band1" value="red"><span>červená</span></label>
+      <label><input type="radio" name="band1" value="orange"><span>oranžová</span></label>
+      <label><input type="radio" name="band1" value="yellow"><span>žltá</span></label>
+      <label><input type="radio" name="band1" value="green"><span>zelená</span></label>
+      <label><input type="radio" name="band1" value="blue"><span>modrá</span></label>
+      <label><input type="radio" name="band1" value="violet"><span>fialová</span></label>
+      <label><input type="radio" name="band1" value="grey"><span>sivá</span></label>
+      <label><input type="radio" name="band1" value="white"><span>biela</span></label>
+    </div>
+  </fieldset>
+
+  <!-- 2. pás -->
+  <fieldset>
+    <legend>2. pás:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="band2" value="black"><span>čierna</span></label>
+      <label><input type="radio" name="band2" value="brown"><span>hnedá</span></label>
+      <label><input type="radio" name="band2" value="red"><span>červená</span></label>
+      <label><input type="radio" name="band2" value="orange"><span>oranžová</span></label>
+      <label><input type="radio" name="band2" value="yellow"><span>žltá</span></label>
+      <label><input type="radio" name="band2" value="green"><span>zelená</span></label>
+      <label><input type="radio" name="band2" value="blue"><span>modrá</span></label>
+      <label><input type="radio" name="band2" value="violet"><span>fialová</span></label>
+      <label><input type="radio" name="band2" value="grey"><span>sivá</span></label>
+      <label><input type="radio" name="band2" value="white"><span>biela</span></label>
+    </div>
+  </fieldset>
+
+  <!-- 3. pás -->
+  <fieldset>
+    <legend>3. pás:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="band3" value="black"><span>čierna</span></label>
+      <label><input type="radio" name="band3" value="brown"><span>hnedá</span></label>
+      <label><input type="radio" name="band3" value="red"><span>červená</span></label>
+      <label><input type="radio" name="band3" value="orange"><span>oranžová</span></label>
+      <label><input type="radio" name="band3" value="yellow"><span>žltá</span></label>
+      <label><input type="radio" name="band3" value="green"><span>zelená</span></label>
+      <label><input type="radio" name="band3" value="blue"><span>modrá</span></label>
+      <label><input type="radio" name="band3" value="violet"><span>fialová</span></label>
+      <label><input type="radio" name="band3" value="grey"><span>sivá</span></label>
+      <label><input type="radio" name="band3" value="white"><span>biela</span></label>
+    </div>
+  </fieldset>
+
+  <!-- násobiteľ -->
+  <fieldset>
+    <legend>Násobiteľ:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="multiplier" value="black"> 
+                <span>čierna</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="multiplier" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="grey"> 
+                <span>sivá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="white">
+                 biela
+            </label>
+
+            <label><input type="radio" name="multiplier" value="gold"> 
+                <span>zlatá</span>
+            </label>
+
+            <label><input type="radio" name="multiplier" value="silver"> 
+                <span>strieborná</span>
+            </label>
+    </div>
+  </fieldset>
+
+  <!-- Tolerancia -->
+  <fieldset>
+    <legend>Tolerancia:</legend>
+    <div class="color-options">
+      <label><input type="radio" name="tolerance" value="brown"> 
+                <span>hnedá</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="red">
+                 <span>červená</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="orange"> 
+                <span>oranžová</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="yellow"> 
+                <span>žltá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="green"> 
+                <span>zelená</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="blue"> 
+                <span>modrá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="violet">
+                <span> fialová</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="grey"> 
+                <span>sivá</span>
+            </label>
+            
+            <label><input type="radio" name="tolerance" value="gold"> 
+                <span>zlatá</span>
+            </label>
+
+            <label><input type="radio" name="tolerance" value="silver"> 
+                <span>strieborná</span>
+            </label>
+    </div>
+  </fieldset>
+
+  <!-- TCR (tepelný koeficient) -->
+  <fieldset>
+    <legend>Tepelný koeficient (ppm/°C):</legend>
+    <div class="color-options">
+      <label><input type="radio" name="tcr" value="brown"><span>hnedá (100)</span></label>
+      <label><input type="radio" name="tcr" value="red"><span>červená (50)</span></label>
+      <label><input type="radio" name="tcr" value="orange"><span>oranžová (15)</span></label>
+      <label><input type="radio" name="tcr" value="yellow"><span>žltá (25)</span></label>
+      <label><input type="radio" name="tcr" value="blue"><span>modrá (10)</span></label>
+      <label><input type="radio" name="tcr" value="violet"><span>fialová (5)</span></label>
+    </div>
+  </fieldset>
+
+<button type="submit">Vypočítať</button>
+</form>
+
+      <div id="result">
+        <!-- Výsledok sa zobrazí tu -->
+      </div>
+    </div>
+
+    <div class="resistor-info">
+      <h3>Vizualizácia výpočtu</h3>
+      <img id="resistor-guide" src="img/resistor4.png" alt="Resistor Guide" class="active"/> 
+      <img id="resistor-guide-5" src="img/resistor5.png" alt="Resistor Guide 5"  />
+      <img id="resistor-guide-6" src="img/resistor6.png" alt="Resistor Guide 6"  />
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+  <header class="feedback-header">
+    <nav>
+      <a href="/index.html">Späť na hlavnú</a>
+    </nav>
+
+  </header>
+</body>
+</html>

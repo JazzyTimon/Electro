@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odošlite spätnú väzbu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+</head>
+<body class="feedback">
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="video/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+  <div class="feedback-container">
+    <h2>Odošlite spätnú väzbu</h2>
+    <form id="feedback-form">
+      <label for="user_name">Meno</label>
+      <input type="text" id="user_name" name="user_name" required>
+
+      <label for="user_age">Vek</label>
+      <input type="number" id="user_age" name="user_age" min="0" max="130" required>
+
+      <label for="user_rating">Hodnotenie (1–5)</label>
+      <input type="number" id="user_rating" name="user_rating" min="1" max="5" required>
+
+      <label for="user_email">Email</label>
+      <input type="email" id="user_email" name="email" required>
+
+      <label for="user_message">Správa</label>
+      <textarea id="user_message" name="user_message" rows="5" required></textarea>
+
+      <button type="submit">Odoslať</button>
+    </form>
+  </div>
+
+  <script>
+    (function(){
+      emailjs.init("nKFHbjnw0p1iYmbKW"); // ← сюда вставь свой Public Key (user ID)
+    })();
+
+    document.getElementById("feedback-form").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      emailjs.sendForm("service_ml2wquj", "template_nwh3yij", this)
+        .then(function() {
+          alert("Vaša spätná väzba bola odoslaná! Ďakujeme.");
+        }, function(error) {
+          alert("Chyba pri odosielaní: " + error);
+        });
+        emailjs.sendForm("service_ml2wquj", "template_7p029y2", this); // admin
+    });
+  </script>
+ <header class="feedback-header">
+    <nav>
+      <a href="/index.html">Späť na hlavnú</a>
+    </nav>
+
+  </header>
+
+</body class="feedback">
+</html>

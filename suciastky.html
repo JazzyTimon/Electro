@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website for electrical technicians- сomponents</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="video/background.mp4" type="video/mp4">
+    </video>
+  </div>
+
+    <header class="site-header">
+  <h1 class="fade-up" style="animation-delay: 0.2s;">Súčiastky</h1>
+  <nav class="fade-up" style="animation-delay: 0.3s;">
+    <nav>
+      <a href="/index.html">Späť na hlavnú</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <div class="accordion-item">
+    <button class="accordion-button">
+      Rezistor
+      <span class="arrow">&#9662;</span>
+    </button>
+    <div class="accordion-content">
+      <h3>Čo to je?</h3>
+      <p>
+        Je to dvojpólová 
+        <span class="tooltip">
+          pasívna
+        <span class="tooltip-text">
+            Pasívne súčiastky len usmerňujú alebo rozptyľujú energiu (napr. rezistor).
+Aktívne súčiastky energiu zosilňujú alebo generujú (napr. tranzistor).
+Rozdiel je v tom, že aktívne potrebujú externé napájanie, pasívne nie.</span>
+  </span>. 
+       
+  súčiastka, ktorá nám zmenšuje prúd. Ľahko si ju môžeme predstaviť ako “zúženie v potrubí”. 
+        Keď si predstavíme, že elektrický obvod je potrubie a voda, ktorá cezeň tečie, je prúd, tak rezistor bude zúžené miesto v potrubí, kde voda tečie pomalšie, čiže prúd je menší.
+      </p>
+
+      <h3>Ako funguje?</h3>
+      <p>
+        Tým, že je to pasívna súčiastka, tak nám nedodáva do elektrického obvodu žiadnu energiu, ale absorbuje ju a mení. 
+        Ako už vieme, existuje Zákon zachovania energie, čo znamená, že energiu nemôžeme vytvoriť z ničoho, ba ani zničiť ju nemôžeme. 
+        Môžeme ju len premeniť z jednej formy na druhú. Taká istá situácia je aj tu – meníme elektrickú energiu na tepelnú a tým zmenšujeme prúd.
+      </p>
+
+      <h3>Načo ho potrebujeme?</h3>
+      <p>
+        Hlavná vlastnosť rezistora je zmenšovať prúd tým, že mení energiu na tepelnú – a to môžeme používať aj vo veľmi neočividných veciach, ako napríklad žiarovka.
+      </p>
+      <p>
+        Vo vnútri žiarovky sa nachádza tenučký kovový drôt – vlákno. Zvyčajne je vyrobené z volfrámu, ktorý má veľmi veľký odpor, 
+        čiže veľmi zle prepúšťa prúd a môžeme ho nazvať rezistorom!
+      </p>
+      <p>
+        Keď týmto drôtom začne pretekať elektrický prúd, elektróny sa zrazia s atómami kovu a ťažko sa pretlačia cez vlákno. 
+        To vytvára veľké trenie na atómovej úrovni a všetka táto energia sa premieňa na teplo. 
+        Drôt sa zahreje natoľko, že začne svietiť. Takto sme pomocou “rezistora” získali teplo a svetlo.
+      </p>
+      <p>
+        Keď hovoríme o elektrickom obvode, tak väčšinou ho používame na zmenšenie veľkého prúdu, aby nám nepoškodil iné súčiastky.
+      </p>
+
+      <h3>Ako pochopím, aký rezistor potrebujem a ako vypočítam jeho odpor?</h3>
+      <p>
+        Ja by som rozdelil rezistory na dva typy – staré a nové. Na starých je rovno napísaný odpor a iné informácie (materiál, chyba atď.). 
+        Na nových (európskych) rezistoroch je odpor zakódovaný vo farebnom kóde. Vypočítať ho môžeme pomocou <a href="/calculator.html">tabulky.</a>  
+      
+
+      </p>
+      <p>
+        Aby sme pochopili, aký rezistor potrebujeme v obvode, musíme najprv vedieť:
+      </p>
+      <ul>
+        <li> Napätie v obvode</li>
+        <li> Akú súčiastku musíme „ochrániť“ a aký má najväčší dovolený prúd</li>
+      </ul>
+      <p>
+  Aký potrebujeme odpor si dopočítame pomocou 
+  <span class="tooltip">
+    Ohmovho zákona
+    <span class="tooltip-img">
+      <img src="img/OmovZakon.jpg" alt="Ohmov zákon">
+    </span>
+  </span>.
+</p>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">
+        Kondenzátor
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">
+        Dióda
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">
+        Tranzistor
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+      const button = item.querySelector('.accordion-button');
+      button.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>

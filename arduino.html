@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website for electrical technicians- сomponents</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="video/background.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header class="site-header">
+  <h1 class="fade-up" style="animation-delay: 0.2s;">Arduino</h1>
+  <nav class="fade-up" style="animation-delay: 0.3s;">
+    <nav>
+      <a href="/index.html">Späť na hlavnú</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <div class="accordion-item">
+      <button class="accordion-button">
+        Pripájanie fotorezistora
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <button class="accordion-button">
+        Pripájanie gombíka
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">
+        "Bežec"
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">
+        Mini hra
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+      const button = item.querySelector('.accordion-button');
+      button.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
